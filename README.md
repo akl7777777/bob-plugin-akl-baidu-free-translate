@@ -1,6 +1,8 @@
 # bob-plugin-akl-baidu-free-translate
 免费无限次使用百度翻译,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
+(发现一个问题,由于我调用的是沪江的服务,沪江在接口返回后如果超过200字符会自动阶段,导致译文不全,要寻找替代方案;如果不长的内容可以用,太长会被截断)
+
 需要deepl插件的朋友请看这里:[deepl免token翻译插件](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
 需要有道翻译插件的朋友请看这里:[有道翻译插件](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
