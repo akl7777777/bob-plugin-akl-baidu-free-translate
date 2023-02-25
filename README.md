@@ -3,11 +3,17 @@
 
 (发现一个问题,由于我调用的是沪江的服务,沪江在接口返回后如果超过200字符会自动阶段,导致译文不全,要寻找替代方案;如果不长的内容可以用,太长会被截断)
 
-需要deepl插件的朋友请看这里:[deepl免token翻译插件](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
+### bob翻译插件大合集:
 
-需要有道翻译插件的朋友请看这里:[有道翻译插件](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
+>[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
-需要MOJi辞書插件的朋友请看这里:[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
+>[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
+
+>[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
+
+>[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
+
+>[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
 
