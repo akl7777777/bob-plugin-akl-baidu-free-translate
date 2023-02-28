@@ -3,11 +3,18 @@
 
 (发现一个问题,由于我调用的是沪江的服务,沪江在接口返回后如果超过200字符会自动阶段,导致译文不全,要寻找替代方案;如果不长的内容可以用,太长会被截断)
 
+
 ### bob翻译插件大合集:
 
 >[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
 >[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
+
+>[火山翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-volcengine-free-translate)
+
+>[腾讯翻译君插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-tencent-free-translate)
+
+>[腾讯交互翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-transmart-free-translate)
 
 >[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
 
