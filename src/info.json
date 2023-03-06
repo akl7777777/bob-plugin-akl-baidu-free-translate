@@ -1,6 +1,6 @@
 {
     "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "category": "translate",
     "name": "Free 百度翻译",
     "summary": "免token调用百度翻译",
@@ -22,6 +22,22 @@
               }
             ],
             "desc":"小芍同学免费调用百度翻译;无需token;无需key;"
+        },
+        {
+            "identifier": "service",
+            "type": "menu",
+            "title": "服务商",
+            "defaultValue": "d",
+            "menuValues": [
+                {
+                    "title": "默认服务商",
+                    "value": "d"
+                },{
+                    "title": "Alpha服务商",
+                    "value": "b"
+                }
+            ],
+            "desc":"默认服务商(建议使用默认服务商)"
         }
     ]
 }
