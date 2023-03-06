@@ -1,12 +1,19 @@
 {
-    "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
-    "versions": [
-        {
-            "version": "0.0.1",
-            "desc": "初始版本",
-            "sha256": "1fee5494fd88f6d0e02d15f7d063f75c08d735f1d997942a158a8d60c7414494",
-            "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v_0.0.1/bob-plugin-akl-baidu-translate_v0.0.1.bobplugin",
-            "minBobVersion": "0.5.0"
-        }
-    ]
+  "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
+  "versions": [
+    {
+      "version": "0.0.2",
+      "desc": "修改请求方式,增加详细日志",
+      "sha256": "6f485babe0b42b66a6ab8cc85aec8e0df383b4f1db4badfd6d65ecddd8312f76",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v0.0.2/bob-plugin-akl-baidu-free-translate_v0.0.2.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
+      "version": "0.0.1",
+      "desc": "初始版本",
+      "sha256": "1fee5494fd88f6d0e02d15f7d063f75c08d735f1d997942a158a8d60c7414494",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v_0.0.1/bob-plugin-akl-baidu-translate_v0.0.1.bobplugin",
+      "minBobVersion": "0.5.0"
+    }
+  ]
 }
