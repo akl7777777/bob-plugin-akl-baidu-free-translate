@@ -3,10 +3,10 @@ var utils = require('./utils.js');
 var CryptoJS = require("crypto-js");
  
 // 加密 
-function btoa(str)  { return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(str)); };
+function btoa(str)  { return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(str)); }
 
 // 解密 
-function atob(str) { return CryptoJS.enc.Base64.parse(str).toString(CryptoJS.enc.Utf8); };
+function atob(str) { return CryptoJS.enc.Base64.parse(str).toString(CryptoJS.enc.Utf8); }
 
 
 function supportLanguages() {
@@ -72,52 +72,48 @@ function translate(query, completion) {
         't': Date.now()
       }
       try {
-        $http.request({
+        const uid_resp = await $http.request({
           method: "POST",
           url: loginUrl,
           header: loginHeaders,
-          body: loginFormData,
-          handler: function (resp) {
-            if (resp.data) {
-              translateHeaders.Cookie = 'HJ_UID='+resp.data.HJ_UID+'; HJC_USRC=uzhi; HJC_NUID=1'
-              $http.request({
-                method: "POST",
-                url: url,
-                header: translateHeaders,
-                body: {content:translate_text},
-                handler: function (resp) {
-                  if (resp.data.data.content) {
-                    completion({
-                      result: {
-                        from: query.detectFrom,
-                        to: query.detectTo,
-                        toParagraphs: resp.data.data.content.split('\n'),
-                      },
-                    });
-                  } else {
-                    const errMsg = resp.data ? JSON.stringify(resp.data) : '未知错误'
-                    completion({
-                      error: {
-                        type: 'unknown',
-                        message: errMsg,
-                        addtion: errMsg,
-                      },
-                    });
-                  }
-                }
-              });
-            } else {
-              const errMsg = resp.data ? JSON.stringify(resp.data) : '未知错误'
-              completion({
-                error: {
-                  type: 'unknown',
-                  message: errMsg,
-                  addtion: errMsg,
-                },
-              });
-            }
-          }
+          body: loginFormData
         });
+        if (uid_resp.data && uid_resp.data.HJ_UID) {
+          translateHeaders.Cookie = 'HJ_UID='+uid_resp.data.HJ_UID+'; HJC_USRC=uzhi; HJC_NUID=1'
+        } else {
+          const errMsg = uid_resp.data ? JSON.stringify(uid_resp.data) : '获取UID未返回有效结果'
+          completion({
+            error: {
+              type: 'unknown',
+              message: errMsg,
+              addtion: errMsg,
+            },
+          });
+        }
+        const resp = await $http.request({
+          method: "POST",
+          url: url,
+          header: translateHeaders,
+          body: {content:translate_text}
+        });
+        if (resp.data && resp.data.data && resp.data.data.content) {
+          completion({
+            result: {
+              from: query.detectFrom,
+              to: query.detectTo,
+              toParagraphs: resp.data.data.content.split('\n'),
+            },
+          });
+        } else {
+          const errMsg = resp.data ? JSON.stringify(resp.data) : '请求翻译接口失败,请检查网络'
+          completion({
+            error: {
+              type: 'unknown',
+              message: errMsg,
+              addtion: errMsg,
+            },
+          });
+        }
       }
       catch (e) {
         $log.error('接口请求错误 ==> ' + JSON.stringify(e))
