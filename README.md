@@ -8,7 +8,7 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 **200字截断的问题已解决,蒸鹅心啊...**
 
-应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node deepl.js调用,需要的自行取用[bd.js]
+应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node bd.js调用,需要的自行取用[bd.js](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/blob/main/node_js/bd.js)
 
 ### bob翻译插件大合集:
 
