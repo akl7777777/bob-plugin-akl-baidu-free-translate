@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
   "versions": [
     {
+      "version": "0.0.3",
+      "desc": "修改请求方式,修复部分用户无法访问的bug",
+      "sha256": "b8812bda0cbe941b32e1435f88fcb4208e673606ea02a059030b24e04641b2db",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v0.0.3/bob-plugin-akl-baidu-free-translate_v0.0.3.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.2",
       "desc": "修改请求方式,增加详细日志",
       "sha256": "6f485babe0b42b66a6ab8cc85aec8e0df383b4f1db4badfd6d65ecddd8312f76",
