@@ -40,14 +40,14 @@ function translate(query, completion) {
         'Accept-Encoding': 'gzip, deflate',
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'no-cache',
-        'Content-Length': '1910',
+        // 'Content-Length': '1910',
         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-        'Host': 'track.hujiang.com',
+        // 'Host': 'track.hujiang.com',
         'Origin': 'http://res.d.hjfile.cn',
         'Pragma': 'no-cache',
         'Proxy-Connection': 'keep-alive',
         'Referer': 'http://res.d.hjfile.cn/app/trans',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
       }
       const translateHeaders = {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -72,7 +72,7 @@ function translate(query, completion) {
         't': Date.now()
       }
       try {
-        const uid_resp = await $http.request({
+        /*const uid_resp = await $http.request({
           method: "POST",
           url: loginUrl,
           header: loginHeaders,
@@ -81,7 +81,7 @@ function translate(query, completion) {
         if (uid_resp.data && uid_resp.data.HJ_UID) {
           translateHeaders.Cookie = 'HJ_UID='+uid_resp.data.HJ_UID+'; HJC_USRC=uzhi; HJC_NUID=1'
         } else {
-          const errMsg = uid_resp.data ? JSON.stringify(uid_resp.data) : '获取UID未返回有效结果'
+          const errMsg = uid_resp.data ? JSON.stringify(uid_resp.data) : '获取UID未返回有效结果=>' + JSON.stringify(uid_resp)
           completion({
             error: {
               type: 'unknown',
@@ -89,7 +89,8 @@ function translate(query, completion) {
               addtion: errMsg,
             },
           });
-        }
+        }*/
+        translateHeaders.Cookie = 'HJ_UID=390f25c7-c9f3-b237-f639-62bd23cd431f; HJC_USRC=uzhi; HJC_NUID=1'
         const resp = await $http.request({
           method: "POST",
           url: url,
