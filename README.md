@@ -10,7 +10,7 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 **200字截断的问题已解决,蒸鹅心啊...**
 
-应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node bd.js调用,需要的自行取用[bd.js](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/blob/main/node_js/bd.js)
+**应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node bd.js调用,需要的自行取用[bd.js](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/blob/main/node_js/bd.js)**
 
 简单描述一下代码逻辑(免得自己以后忘了):
 第一次登录,获取cookie,然后马上刷页面,根据带上这个cookie重复请求上一个地址,然后会给你一个token还有一个gtk,最后你通过这个gtk和你要翻译的内容进行一系列复杂的加密算法,得到一个sign,然后把token,sign,cookie还有翻译内容都发给翻译服务,后台会校验你请求是否篡改
