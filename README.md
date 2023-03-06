@@ -3,6 +3,8 @@
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
 
+下载地址:[百度翻译Bob插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v0.0.5/bob-plugin-akl-baidu-free-translate_v0.0.5.bobplugin)
+
 
 ~~(发现一个问题,由于我调用的是沪江的服务,沪江在接口返回后如果超过200字符会自动阶段,导致译文不全,要寻找替代方案;如果不长的内容可以用,太长会被截断)~~
 
