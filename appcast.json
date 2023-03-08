@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
   "versions": [
     {
+      "version": "0.0.6",
+      "desc": "修复日语翻译问题,扩展多语种的支持列表",
+      "sha256": "9c0d6a4b566af7ad191dff64a65233b048d933b938283d47ec622b902b6fa8f9",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v0.0.6/bob-plugin-akl-baidu-free-translate_v0.0.6.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.5",
       "desc": "整体重构,突破200上限,支持多家服务商切换,翻译更流畅,不报错",
       "sha256": "405f43456cf32716a72cac60f97d65c3c643a8c2e68876c92ad1c5c7aa55e37e",
