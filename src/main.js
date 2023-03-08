@@ -5,11 +5,17 @@ var dd = require('./d')
 
 
 function supportLanguages() {
-    return config.supportedLanguages.map(([standardLang]) => standardLang);
+    const serv = $option.service;
+    if (serv === 'd') {
+        return config.supportedLanguages2.map(([standardLang]) => standardLang);
+    } else {
+        return config.supportedLanguages.map(([standardLang]) => standardLang);
+    }
 }
 
 function translate(query, completion) {
     (async () => {
+        const serv = $option.service;
         const targetLanguage = utils.langMap.get(query.detectTo);
         const sourceLanguage = utils.langMap.get(query.detectFrom);
         if (!targetLanguage) {
@@ -24,7 +30,7 @@ function translate(query, completion) {
         const target_lang = targetLanguage || 'en';
         const translate_text = query.text || '';
         if (translate_text !== '') {
-            const serv = $option.service;
+
             if (serv === 'b') {
                 await bb.translate(query, source_lang, target_lang, translate_text, completion)
             } else {

@@ -9,7 +9,6 @@ function n(t, e) {
 }
 
 function encrypt(t, gtk) {
-    //  "320305.131321201";
     console.log(t, gtk)
     let r = gtk
     var o, i = t.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g);
@@ -62,6 +61,13 @@ async function translate(query, source_lang, target_lang, translate_text, comple
     }
     if (target_lang == 'cn') {
         target_lang = 'zh'
+    }
+    // 特殊处理日语
+    if (source_lang == 'ja') {
+        source_lang = 'jp'
+    }
+    if (target_lang == 'ja') {
+        target_lang = 'jp'
     }
     try {
         const url = 'https://fanyi.baidu.com/';
