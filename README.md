@@ -15,8 +15,12 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 简单描述一下代码逻辑(免得自己以后忘了):
 第一次登录,获取cookie,然后马上刷页面,根据带上这个cookie重复请求上一个地址,然后会给你一个token还有一个gtk,最后你通过这个gtk和你要翻译的内容进行一系列复杂的加密算法,得到一个sign,然后把token,sign,cookie还有翻译内容都发给翻译服务,后台会校验你请求是否篡改
 
+### 友情链接==>ChatGPT免费桌面版客户端(支持Windows,macOS)
+下载地址:[OpenAI-ChatGPT免费桌面版客户端](https://github.com/akl7777777/free-chatgpt-client-pub)
+
 ### bob翻译插件大合集:
 
+>[OpenAI ChatGPT(免秘钥)插件](https://github.com/akl7777777/bob-plugin-akl-chatgpt-free-translate)
 
 >[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
@@ -26,11 +30,11 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 >[火山翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-volcengine-free-translate)
 
+>[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
+
 >[腾讯翻译君插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-tencent-free-translate)
 
 >[腾讯交互翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-transmart-free-translate)
-
->[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
 
 >[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
 
