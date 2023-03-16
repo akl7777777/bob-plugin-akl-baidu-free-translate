@@ -1,10 +1,10 @@
 {
     "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "category": "translate",
     "name": "Free 百度翻译",
     "summary": "免token调用百度翻译",
-    "icon": "icon.png",
+    "icon": "103",
     "author": "akl7777777 <akl7777777@163.com>",
     "homepage": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate",
     "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-baidu-free-translate/main/appcast.json",
