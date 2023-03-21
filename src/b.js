@@ -94,11 +94,6 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
             }
         });
-        $log.error('#################respCookie==>' + JSON.stringify(respCookie))
-        $log.error('#################respCookie.response==>' + JSON.stringify(respCookie.response))
-        $log.error('#################respCookie.response.headers==>' + JSON.stringify(respCookie.response.headers))
-        // const cookie = respCookie.headers['Set-Cookie']
-        // $log.error('#################cookie==>' + JSON.stringify(cookie))
 
         // 第二轮取gtk,token
         const respTks = await $http.request({
@@ -112,15 +107,11 @@ async function translate(query, source_lang, target_lang, translate_text, comple
         });
         const gtk = respTks.data.match(/window\.gtk\s*=\s*"([\d.]+)"/)[1];
         const token = respTks.data.match(/token:\s*'(\w+)'/)[1];
-        $log.error('################# gtk ==>' + gtk)
-        $log.error('################# token ==>' + token)
         const headers = {
-            // Cookie: cookie,
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
         };
         const sign = encrypt(translate_text, gtk)
-        $log.error('################# sign ==>' + token)
 
         const data = {
             from: source_lang,

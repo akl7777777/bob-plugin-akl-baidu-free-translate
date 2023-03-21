@@ -1,6 +1,6 @@
 {
     "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
-    "version": "0.0.7",
+    "version": "0.1.0",
     "category": "translate",
     "name": "Free 百度翻译",
     "summary": "免token调用百度翻译",
