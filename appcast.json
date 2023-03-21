@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-baidu-free-translate",
   "versions": [
     {
+      "version": "0.1.0",
+      "desc": "优化插件性能",
+      "sha256": "996955cc96423f0b9c58f60e164364d9a9da0d0849fa69a0681320edd753ab1b",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate/releases/download/v0.1.0/bob-plugin-akl-baidu-free-translate_v0.1.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.7",
       "desc": "替换bob官方提供的图标",
       "sha256": "f98b33d03af834a79b20ee9baab1a1a5dcba63274a6e4777750a78179f1d900c",
